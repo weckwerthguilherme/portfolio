@@ -1,0 +1,151 @@
+:root {
+    --cor-principal: #34495e;
+    --cor-secundaria: #ecf0f1;
+    --cor-destaque: #e74c3c;
+    --cor-texto: #555;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    line-height: 1.6;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    margin: 10px auto 0;
+}
+
+#sobre p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.galeria-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projeto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.projeto-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--cor-principal);
+}
+
+.projeto-card p {
+    padding: 0 1rem;
+    color: #777;
+}
+
+.btn-projeto {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 1rem 0;
+    transition: background-color 0.3s;
+}
+
+.btn-projeto:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque);
+}
+
+@media (max-width: 768px) {
+    .galeria-projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
